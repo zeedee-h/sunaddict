@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sunmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    
+  <!-- Swiper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script> 
+
+  <!-- Google webfonts -->  
+  <link href="https://fonts.googleapis.com/css?family=Assistant:300,700" rel="stylesheet">
+    
+  <!-- OSMB 3D API  -->
+  <link href="https://cdn.osmbuildings.org/3.2.10/OSMBuildings.css" rel="stylesheet">
+  <script src="https://cdn.osmbuildings.org/3.2.10/OSMBuildings.js"></script>
+    
+  <!-- jquery -->  
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+  <!-- suncalc --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.js"></script>
+    
+  <!-- original css -->
+  <link rel="stylesheet" href="./swiper-sunmap-3d-style.css">
+    
+</head>
+    
+<body>
+    
+    <div id="mySidenav" class="sidenav">
+        <div id="slideNavContent">
+          <a href="javascript:void(0)" id="menuCloseBtn" class="closebtn">&times;</a>
+          <a href="#">Favourites</a>
+            <div id="favourites">
+                <p>Home</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+    </div>
+    
+    <div id="labels">
+        <div id="userLabel" class="shadow"></div>
+        <!--<div class="benchLabel"><img class="benchIcon" src="https://www.dropbox.com/s/rhha2bj6ujz2xpc/bench128.png?raw=1"></div>-->
+    </div>    
+    
+<div id="map">
+    <div id="locateBtn">
+        <svg class="shadow" id="locate_svg" data-name="locate_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:#fff;}</style></defs><title>sunset copy</title><polygon class="cls-1" points="41.92 57.08 50.4 86.78 78.69 20.31 12.22 48.6 41.92 57.08"/>
+        </svg>
+    </div>
+    <div id="searchBtn">
+        <svg class="shadow" id="search_svg" data-name="search_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5.67px;}</style></defs><title>search</title><circle class="cls-1" cx="45" cy="51" r="25"/><line class="cls-1" x1="66" y1="67.5" x2="80.5" y2="82"/></svg>
+    </div>
+    <div id="menuBtn">
+        <svg class="shadow" id="menu_svg" data-name="menu_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5.67px;}</style></defs><title>Artboard 7</title><line class="cls-1" x1="25.5" y1="27" x2="74.5" y2="27"/><line class="cls-1" x1="26" y1="73" x2="75" y2="73"/><line class="cls-1" x1="26" y1="50" x2="75" y2="50"/></svg>
+    </div>
+    <div id="timeDisplay" class="whitelinks"></div>
+</div>
+
+<div id="menuSpacer"></div>
+    
+<!-- Swiper -->
+ <div class="swiper-container-v">
+      <div class="swiper-wrapper">
+          
+          <div class="swiper-slide vs">
+              <div class="swiper-container-h1">
+                <div class="selectorSquare"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide h1s l"><div class="time">1</div></div> 
+                  <div class="swiper-slide h1s k"><div class="time">2</div></div> 
+                  <div class="swiper-slide h1s j"><div class="time">3</div></div> 
+                  <div class="swiper-slide h1s i"><div class="time">4</div></div> 
+                  <div class="swiper-slide h1s h"><div class="time">5</div></div> 
+                  <div class="swiper-slide h1s g"><div class="time">6</div></div> 
+                  <div class="swiper-slide h1s f"><div class="time">7</div></div>
+                  <div class="swiper-slide h1s e"><div class="time">8</div></div>
+                  <div class="swiper-slide h1s d"><div class="time">9</div></div>
+                  <div class="swiper-slide h1s c"><div class="time">10</div></div>
+                  <div class="swiper-slide h1s b"><div class="time">11</div></div>
+                  <div class="swiper-slide h1s a"><div class="time">12</div></div>
+                  <div class="swiper-slide h1s b"><div class="time">13</div></div>
+                  <div class="swiper-slide h1s c"><div class="time">14</div></div>
+                  <div class="swiper-slide h1s d"><div class="time">15</div></div>
+                  <div class="swiper-slide h1s e"><div class="time">16</div></div>
+                  <div class="swiper-slide h1s f"><div class="time">17</div></div>
+                  <div class="swiper-slide h1s g"><div class="time">18</div></div>
+                  <div class="swiper-slide h1s h"><div class="time">19</div></div>
+                  <div class="swiper-slide h1s i"><div class="time">20</div></div>
+                  <div class="swiper-slide h1s j"><div class="time">21</div></div>
+                  <div class="swiper-slide h1s k"><div class="time">22</div></div>
+                  <div class="swiper-slide h1s l"><div class="time">23</div></div>
+                  <div class="swiper-slide h1s m"><div class="time">24</div></div>
+                </div>
+              </div>
+          </div>
+          <div class="swiper-slide vs">
+              <div class="swiper-container-h2">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide h2s c"> <!-- temp, these divs should be created by js -->
+                    <div class="cafeDeets">
+                        <span class="cafeName">Closest Cafe</span><span class="cafeDist"> - 1.2 km</span>
+                    </div>
+                    <div class="mapIconContainer">
+                        <svg class="mapIcon" fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/><path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+                    </div>
+                  </div>
+                  <div class="swiper-slide h2s d">
+                    <div class="cafeDeets">
+                        <span class="cafeName">Closest Spot</span><span class="cafeDist"> - 2.2 km</span>
+                    </div>
+                    <div class="mapIconContainer">
+                        <svg class="mapIcon" fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/><path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+                    </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+
+  <!-- original script -->
+  <script type="text/javascript" src="./swiper-sunmap-3d-script.js"></script>
+    
+  <!-- osmb3d website script 
+  <script type="text/javascript" src="https://www.dropbox.com/s/ra4ef6yzvnct52p/swiper-sunmap-osmb3d.js?raw=1"></script> -->
+    
+</body>
+</html>

@@ -1,0 +1,311 @@
+html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #3f3f3f;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+      /*.searchbar{
+      width: 100%;
+      height: 10%;
+      background-color: burlywood;
+      display: block;
+      position: relative;
+    }*/
+      #map {
+      width: 100%;
+      height: 85%;
+      background-color: darkgray;
+      display: block;
+      position: relative; 
+          
+      transition: height 0.15s ease-out;     
+    }
+
+    #menuSpacer {
+        height: 0%;
+        display: block;
+        
+        transition: height 0.15s ease-out;
+    }
+
+      #locateBtn{
+      position: absolute;
+      right: 5%;
+      bottom: 7%;
+      width: 40px;
+      height: 40px;
+      z-index: 50;
+      background-color: #e5a38c;
+      padding: 10px;
+      border-radius: 50%;
+     }
+      #searchBtn{
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      width: 40px;
+      height: 40px;
+
+      z-index: 50;
+     }
+      #menuBtn{
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      width: 40px;
+      height: 40px;
+
+      z-index: 50;
+     }
+      #timeDisplay{
+      position: absolute;
+      left: 5%;
+      bottom: 5%;
+          
+      font-family: 'Assistant',Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 28px;
+      text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.6);
+      letter-spacing: 1px;
+          
+      z-index: 50;
+     }
+
+.whitelinks a {
+    color: white;
+    text-decoration: none;
+}
+      .shadow {
+            filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.6) );
+     }
+      .shadow2 {
+            filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.2) );
+     }
+      .selectorSquare{
+          
+          pointer-events: none; /* click through div */
+          
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          bottom: 0px;
+          width: 20%;
+          height: inherit;
+          
+          box-sizing: border-box;
+          border: 6px solid white;
+          
+          z-index: 100;
+          
+      }
+      
+    .swiper-container-v {
+      background: #3f3f3f;
+      height: 15%;
+      width: 100%;
+    }
+
+    /*.swiper-container {
+      width: 100%;
+      height: 100%;
+    }*/
+
+    .swiper-container-h1 {
+      width: 100%;
+      height: 100%;    
+      display: block;
+        z-index: 10;
+    }
+    .swiper-container-h2 {
+      width: 100%;
+      height: 100%;    
+      display: block;
+        z-index: 10;
+    }
+    .swiper-slide {
+      font-family: 'Assistant', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 1px 1px 0px rgba(0,0,0, 0.2);
+      font-size: 20px;
+      font-variant: small-caps;
+      letter-spacing: 1px;
+      line-height: 0.8;
+        
+        position: relative;
+        
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: flex-end;
+      -ms-flex-align: flex-end;
+      -webkit-align-items: flex-end;
+      align-items: flex-end;
+    }
+
+.time {
+    margin-bottom: 20%;
+}
+      .swiper-slide.a {background-color: #faf0a7}
+      .swiper-slide.b {background-color: #f7e492}
+      .swiper-slide.c {background-color: #f0c689}
+      .swiper-slide.d {background-color: #e5a38c}
+      .swiper-slide.e {background-color: #e3968b}
+      .swiper-slide.f {background-color: #e1898b}
+      .swiper-slide.g {background-color: #d59096}
+      .swiper-slide.h {background-color: #ca97a1}
+      .swiper-slide.i {background-color: #a6879a}
+      .swiper-slide.j {background-color: #7f7893}
+      .swiper-slide.k {background-color: #596085}
+      .swiper-slide.l {background-color: #464b68}
+      .swiper-slide.m {background-color: #464b61}
+      
+      .vs {
+      }
+      .h1s {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 90%;
+      }
+      .h2s {
+          font-variant: normal;
+          font-weight: 300;
+          
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      }
+
+      .hidden {
+          display: none;
+      }
+      .swiperSunSvg {
+          width: 55%;
+      }
+
+    .weatherIcon {
+        width: 50%;
+        display: block;
+        position: absolute;
+        top: 10%;
+        z-index: 110;
+    }
+    .benchLabel {
+      display: block;
+      position: absolute;
+      width: 23px;    
+      z-Index: 1;
+      pointer-events: none;
+    }
+    .benchIcon {
+        position: relative;
+        margin-top: -50%;
+        margin-left: -50%;
+        width: 23px;
+      }
+    #userLabel {
+      display: none;
+      background-color: #596085;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      z-Index:11;
+      pointer-events: none;
+        border: 2px solid white;
+    }
+.mapIconContainer {
+    position: absolute;
+    right: 20px;
+    width: 48px;
+}
+.mapIcon {
+    filter: drop-shadow( 1px 1px 0px rgba(0, 0, 0, 0.2) );
+}
+.cafeDeets {
+    position: absolute;
+    width: 70%;
+    left: 15px;
+    text-align: left;
+    /*line-height: 0.5;*/
+}
+.cafeName {
+    font-weight: 700;
+}
+.cafeDist {
+    display: inline;
+    white-space: nowrap;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #e1898b; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    
+    z-index: 55;
+    
+    box-shadow: 0 0 0 1800px rgba(0, 0, 0, 0);
+    
+}
+
+#slideNavContent {
+    padding: 80px 20px 20px 40px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Assistant', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 1px 1px 0px rgba(0,0,0, 0.2);
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #596085;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 4%;
+    font-size: 40px;
+}
+
+.sidenav p {
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Assistant', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 1px 1px 0px rgba(0,0,0, 0.2);
+    font-size: 20px;
+}
+
+#favourites {
+    white-space: nowrap;
+}
